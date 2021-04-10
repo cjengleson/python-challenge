@@ -55,7 +55,18 @@ print("Average Change: " + str(formatted_profit_change))
 print(f"Greatest Increase in Profits: {total_months[max_month]} (${str(max_increase)})")  
 print(f"Greatest Decrease in Profits: {total_months[min_month]} (${str(min_increase)})")
 
-
-# list to string
-# "string " + ". ".join(list) + " string."
-# 'string ' + str(list[1]) + 'string'
+# export to text file
+output_txt_file = open("..", "Analysis", "Budget_Analysis.txt", "w")
+output_txt_file.write("Financial Analysis")
+output_txt_file.write("\n")
+output_txt_file.write("----------------------------")
+output_txt_file.write("\n")
+output_txt_file.write("Total Months: " + str(len(total_months)))
+output_txt_file.write("\n")
+output_txt_file.write("Total: " + str(net_profit))
+output_txt_file.write("\n")
+output_txt_file.write("Average Change: " + str(formatted_profit_change))
+output_txt_file.write("\n")
+output_txt_file.write(f"Greatest Increase in Profits: {str(total_months[max_month])} (${str(max_increase)})")  
+output_txt_file.write("\n")
+output_txt_file.write(f"Greatest Decrease in Profits: {str(total_months[min_month])} (${str(min_increase)})")
